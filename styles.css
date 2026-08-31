@@ -1,881 +1,405 @@
-/* =========================================================
-   SENTIDIÑO
-   Laboratorio de cidadanía cultural e humanidades aplicadas
-   ========================================================= */
+<!DOCTYPE html>
+<html lang="gl">
 
-:root {
-  --text: #171717;
-  --muted: #68706a;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  --cream: #f4f0e6;
+  <title>SENTIDIÑO | Laboratorio de cidadanía cultural e humanidades aplicadas</title>
 
-  --olive: #69744c;
-  --teal: #477b78;
-  --ochre: #c48b1e;
-  --navy: #0d2d50;
+  <meta
+    name="description"
+    content="SENTIDIÑO é un laboratorio de cidadanía cultural e humanidades aplicadas que conecta investigación, creación e intervención no territorio."
+  >
 
-  --max-width: 1360px;
-  --side-padding: 42px;
-}
+  <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
 
-/* =========================================================
-   RESET
-   ========================================================= */
+  <!-- =====================================================
+       CABECEIRA
+       ===================================================== -->
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+  <header class="site-header">
 
-html {
-  scroll-behavior: smooth;
-}
+    <div class="header-inner">
 
-body {
-  margin: 0;
+      <a
+        class="brand"
+        href="#inicio"
+        aria-label="SENTIDIÑO — Inicio"
+      >
 
-  color: var(--text);
-  background: #ffffff;
+        <img
+          class="brand-logo"
+          src="assets/images/Logo_SENTIDINO_marca.png"
+          alt="SENTIDIÑO"
+        >
 
-  font-family:
-    "Avenir Next",
-    Avenir,
-    "Segoe UI",
-    Helvetica,
-    Arial,
-    sans-serif;
+        <span class="brand-divider" aria-hidden="true"></span>
 
-  font-size: 16px;
-  line-height: 1.45;
+        <span class="brand-subtitle">
+          Laboratorio de cidadanía cultural<br>
+          e humanidades aplicadas
+        </span>
 
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+      </a>
 
-img {
-  display: block;
-  max-width: 100%;
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+      <nav
+        class="main-nav"
+        aria-label="Navegación principal"
+      >
 
-p {
-  margin-top: 0;
-}
+        <a href="#laboratorio">O LABORATORIO</a>
+        <a href="#linas">LIÑAS DE TRABALLO</a>
+        <a href="#proxectos">PROXECTOS</a>
+        <a href="#actividades">ACTIVIDADES</a>
+        <a href="#recursos">RECURSOS</a>
+        <a href="#equipo">EQUIPO</a>
+        <a href="#contacto">CONTACTO</a>
 
+        <a
+          href="#"
+          class="language"
+          aria-label="Idioma: galego"
+        >
+          GL
+        </a>
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+      </nav>
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    </div>
 
-  width: 100%;
+  </header>
 
-  background: rgba(255, 255, 255, 0.98);
 
-  border-bottom:
-    1px solid
-    rgba(17, 27, 43, 0.045);
+  <!-- =====================================================
+       CONTIDO PRINCIPAL
+       ===================================================== -->
 
-  backdrop-filter: blur(10px);
-}
+  <main id="inicio">
 
-.header-inner {
-  width: min(100%, var(--max-width));
 
-  height: 112px;
+    <!-- ===================================================
+         HERO
+         =================================================== -->
 
-  margin: 0 auto;
+    <section class="hero">
 
-  padding:
-    10px
-    var(--side-padding);
+      <div class="hero-text">
 
-  display: flex;
+        <h1>
+          <span class="hero-line">Pensar a cultura.</span>
+          <span class="hero-line">Traballar co territorio.</span>
+          <span class="hero-line">Transformar o común.</span>
+        </h1>
 
-  align-items: center;
+        <p>
+          Un laboratorio para conectar humanidades, cidadanía e intervención cultural
+          dende Galiza.
+        </p>
 
-  justify-content: space-between;
+      </div>
 
-  gap: 30px;
-}
 
+      <div class="hero-visual">
 
-/* =========================================================
-   LOGO
-   ========================================================= */
+        <img
+          class="hero-image"
+          src="assets/images/hero-galicia.png"
+          alt="Collage visual sobre cultura, territorio e humanidades en Galiza"
+        >
 
-.brand {
-  flex: 0 0 auto;
+      </div>
 
-  display: flex;
+    </section>
 
-  align-items: center;
-}
 
-.brand-logo {
-  display: block;
+    <!-- ===================================================
+         O LABORATORIO
+         =================================================== -->
 
-  width: 410px;
+    <section
+      id="laboratorio"
+      class="section section-tinted"
+    >
 
-  height: auto;
+      <div class="section-heading">
 
-  max-height: 88px;
+        <p class="eyebrow">
+          O LABORATORIO
+        </p>
 
-  object-fit: contain;
+        <h2>
+          Humanidades que saen da universidade.
+        </h2>
 
-  object-position: left center;
-}
+      </div>
 
 
-/* =========================================================
-   NAVEGACIÓN
-   ========================================================= */
+      <div class="section-content">
 
-.main-nav {
-  flex: 1 1 auto;
+        <p>
+          SENTIDIÑO é un laboratorio de cidadanía cultural e humanidades
+          aplicadas que conecta investigación, creación e intervención
+          no territorio. Traballamos para converter o coñecemento
+          humanístico en ferramentas capaces de interpretar problemas
+          contemporáneos, activar comunidades e producir novas formas
+          de participación cultural.
+        </p>
 
-  display: flex;
+        <a
+          class="text-link"
+          href="#laboratorio"
+        >
+          Coñece SENTIDIÑO →
+        </a>
 
-  align-items: center;
+      </div>
 
-  justify-content: flex-end;
+    </section>
 
-  gap: 20px;
 
-  font-size: 11px;
+    <!-- ===================================================
+         LIÑAS DE TRABALLO
+         =================================================== -->
 
-  font-weight: 500;
+    <section
+      id="linas"
+      class="section work-section"
+    >
 
-  line-height: 1;
+      <div class="section-intro">
 
-  white-space: nowrap;
-}
+        <p class="eyebrow">
+          LIÑAS DE TRABALLO
+        </p>
 
-.main-nav a {
-  position: relative;
+        <h2>
+          Da investigación á acción.
+        </h2>
 
-  transition:
-    color 0.2s ease,
-    opacity 0.2s ease;
-}
+        <p>
+          SENTIDIÑO articula o seu traballo arredor de catro ámbitos conectados.
+        </p>
 
-.main-nav a:not(.language)::after {
-  content: "";
+      </div>
 
-  position: absolute;
 
-  left: 0;
+      <div class="work-grid">
 
-  bottom: -7px;
+        <article class="work-item">
+          <span class="number">01</span>
 
-  width: 100%;
+          <h3>Cidadanía cultural</h3>
 
-  height: 1px;
+          <p>
+            Participación, acceso á cultura e creación de comunidades culturais activas.
+          </p>
+        </article>
 
-  background: var(--olive);
 
-  transform: scaleX(0);
+        <article class="work-item">
+          <span class="number">02</span>
 
-  transform-origin: left;
+          <h3>Humanidades aplicadas</h3>
 
-  transition: transform 0.22s ease;
-}
+          <p>
+            Transferencia do coñecemento humanístico cara a problemas e contextos concretos.
+          </p>
+        </article>
 
-.main-nav a:hover {
-  color: var(--olive);
-}
 
-.main-nav a:hover::after {
-  transform: scaleX(1);
-}
+        <article class="work-item">
+          <span class="number">03</span>
 
-.main-nav .language {
-  margin-left: 1px;
+          <h3>Territorio e patrimonio</h3>
 
-  color: var(--muted);
-}
+          <p>
+            Novas formas de interpretar, activar e comunicar os patrimonios e as culturas locais.
+          </p>
+        </article>
 
 
-/* =========================================================
-   HERO
-   ========================================================= */
+        <article class="work-item">
+          <span class="number">04</span>
 
-.hero {
-  width: min(100%, var(--max-width));
+          <h3>Humanidades dixitais</h3>
 
-  min-height: 500px;
+          <p>
+            Tecnoloxías dixitais ao servizo da investigación,
+            a mediación cultural e a participación.
+          </p>
+        </article>
 
-  margin: 0 auto;
+      </div>
 
-  padding:
-    48px
-    var(--side-padding);
 
-  display: grid;
+      <a
+        class="text-link"
+        href="#linas"
+      >
+        Explora as liñas de traballo →
+      </a>
 
-  grid-template-columns:
-    minmax(0, 1.12fr)
-    minmax(0, 0.88fr);
+    </section>
 
-  align-items: center;
 
-  gap: 78px;
-}
+    <!-- ===================================================
+         PROXECTOS
+         =================================================== -->
 
+    <section
+      id="proxectos"
+      class="section section-tinted projects-section"
+    >
 
-/* =========================================================
-   HERO — TEXTO
-   ========================================================= */
+      <div class="section-intro">
 
-.hero-text {
-  width: 100%;
+        <p class="eyebrow">
+          PROXECTOS
+        </p>
 
-  max-width: 640px;
-}
+        <h2>
+          Investigación situada. Impacto compartido.
+        </h2>
 
-.hero h1 {
-  margin: 0;
+      </div>
 
-  font-size: 43px;
 
-  font-weight: 400;
+      <div class="projects-grid">
 
-  line-height: 1.025;
+        <article class="project">
 
-  letter-spacing: -0.035em;
-}
+          <img
+            class="project-image mondo"
+            src="assets/images/mondonhedo.jpg"
+            alt="Mondoñedo: territorio literario"
+            loading="lazy"
+          >
 
-.hero-line {
-  display: block;
+          <h3>
+            MONDOÑEDO: TERRITORIO LITERARIO
+          </h3>
 
-  white-space: nowrap;
-}
+          <p class="project-subtitle">
+            Literatura, memoria e territorio
+          </p>
 
-.hero-text > p {
-  max-width: 625px;
+          <p>
+            Cartografía, realidade aumentada e itinerarios culturais
+            para explorar as relacións entre literatura, memoria e territorio.
+          </p>
 
-  margin:
-    14px
-    0
-    0;
+          <a
+            class="text-link"
+            href="#proxectos"
+          >
+            Coñece o proxecto →
+          </a>
 
-  font-size: 16px;
+        </article>
 
-  line-height: 1.35;
-}
 
+        <article class="project">
 
-/* =========================================================
-   HERO — IMAXE
-   ========================================================= */
+          <img
+            class="project-image narrage"
+            src="assets/images/Logo_NARRAGE.png"
+            alt="NARRAGE — Narrative Approaches to Re-Reading Ageing in Europe"
+            loading="lazy"
+          >
 
-.hero-visual {
-  width: 100%;
+          <h3>
+            NARRAGE
+          </h3>
 
-  display: flex;
+          <p class="project-subtitle">
+            Narrative Approaches to Re-Reading Ageing in Europe
+          </p>
 
-  align-items: center;
+          <p>
+            Un proxecto europeo que conecta estudos literarios,
+            psicoloxía, xeriatría, humanidades dixitais, traballo social
+            e humanidades aplicadas para explorar as relacións entre
+            narrativas, envellecemento e experiencia vivida.
+          </p>
 
-  justify-content: flex-end;
-}
+          <a
+            class="text-link"
+            href="#proxectos"
+          >
+            Coñece o proxecto →
+          </a>
 
-.hero-image {
-  display: block;
+        </article>
 
-  width: 100%;
+      </div>
 
-  max-width: 520px;
+    </section>
 
-  height: auto;
 
-  object-fit: contain;
-}
+    <!-- ===================================================
+         ACTIVIDADES
+         =================================================== -->
 
+    <section
+      id="actividades"
+      class="placeholder-section"
+    >
+      <p class="eyebrow">ACTIVIDADES</p>
+    </section>
 
-/* =========================================================
-   SECCIÓNS XERAIS
-   ========================================================= */
 
-.section {
-  width: 100%;
+    <!-- ===================================================
+         RECURSOS
+         =================================================== -->
 
-  padding:
-    74px
-    var(--side-padding);
-}
+    <section
+      id="recursos"
+      class="placeholder-section"
+    >
+      <p class="eyebrow">RECURSOS</p>
+    </section>
 
-.section > * {
-  width: min(
-    100%,
-    calc(var(--max-width) - (2 * var(--side-padding)))
-  );
 
-  margin-left: auto;
+    <!-- ===================================================
+         EQUIPO
+         =================================================== -->
 
-  margin-right: auto;
-}
+    <section
+      id="equipo"
+      class="placeholder-section"
+    >
+      <p class="eyebrow">EQUIPO</p>
+    </section>
 
-.section-tinted {
-  background: var(--cream);
-}
+  </main>
 
 
-/* =========================================================
-   EYEBROW
-   ========================================================= */
+  <!-- =====================================================
+       PÉ
+       ===================================================== -->
 
-.eyebrow {
-  margin:
-    0
-    0
-    11px;
+  <footer
+    id="contacto"
+    class="site-footer"
+  >
 
-  font-size: 12px;
+    <div>
+      <strong>SENTIDIÑO</strong>
+      <br>
+      Laboratorio de cidadanía cultural e humanidades aplicadas
+    </div>
 
-  font-weight: 500;
+    <div>
+      Galiza
+    </div>
 
-  letter-spacing: 0.08em;
+  </footer>
 
-  text-transform: uppercase;
-}
+</body>
 
-
-/* =========================================================
-   TÍTULOS DE SECCIÓN
-   ========================================================= */
-
-.section h2 {
-  margin: 0;
-
-  font-size: 38px;
-
-  font-weight: 400;
-
-  line-height: 1.08;
-
-  letter-spacing: -0.025em;
-}
-
-
-/* =========================================================
-   ENLACES
-   ========================================================= */
-
-.text-link {
-  display: inline-block;
-
-  margin-top: 19px;
-
-  padding-bottom: 2px;
-
-  font-size: 14px;
-
-  border-bottom:
-    1px solid
-    currentColor;
-
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.text-link:hover {
-  color: var(--olive);
-
-  transform: translateX(3px);
-}
-
-
-/* =========================================================
-   O LABORATORIO
-   ========================================================= */
-
-#laboratorio {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 0.95fr)
-    minmax(0, 1.05fr);
-
-  gap: 112px;
-
-  padding-top: 46px;
-
-  padding-bottom: 58px;
-}
-
-#laboratorio > * {
-  width: auto;
-
-  margin: 0;
-}
-
-.section-heading {
-  align-self: start;
-}
-
-.section-content {
-  max-width: 610px;
-
-  align-self: end;
-
-  padding-top: 6px;
-}
-
-.section-content p {
-  margin-bottom: 0;
-
-  font-size: 17px;
-
-  line-height: 1.42;
-}
-
-
-/* =========================================================
-   LIÑAS DE TRABALLO
-   ========================================================= */
-
-.work-section {
-  padding-top: 105px;
-
-  padding-bottom: 120px;
-}
-
-.section-intro {
-  margin-bottom: 84px;
-}
-
-.section-intro > p:last-child {
-  max-width: 700px;
-
-  margin:
-    14px
-    0
-    0;
-
-  font-size: 17px;
-}
-
-
-/* =========================================================
-   LIÑAS — GRID
-   ========================================================= */
-
-.work-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  column-gap: 150px;
-
-  row-gap: 85px;
-
-  margin-bottom: 30px;
-}
-
-.work-item {
-  max-width: 490px;
-}
-
-.number {
-  display: block;
-
-  margin-bottom: 4px;
-
-  color: var(--olive);
-
-  font-size: 19px;
-
-  font-weight: 400;
-}
-
-.work-item h3 {
-  margin:
-    0
-    0
-    6px;
-
-  font-size: 29px;
-
-  font-weight: 400;
-
-  line-height: 1.1;
-
-  letter-spacing: -0.02em;
-}
-
-.work-item p {
-  max-width: 430px;
-
-  margin: 0;
-
-  font-size: 16px;
-
-  line-height: 1.45;
-}
-
-
-/* =========================================================
-   PROXECTOS
-   ========================================================= */
-
-.projects-section {
-  padding-top: 90px;
-
-  padding-bottom: 105px;
-}
-
-.projects-section .section-intro {
-  margin-bottom: 64px;
-}
-
-.projects-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 95px;
-}
-
-.project {
-  min-width: 0;
-}
-
-
-/* =========================================================
-   PROXECTOS — IMAXES
-   ========================================================= */
-
-.project-image {
-  display: block;
-
-  width: 100%;
-
-  aspect-ratio: 16 / 10;
-
-  margin-bottom: 25px;
-
-  object-fit: cover;
-}
-
-.project-image.mondo {
-  object-fit: cover;
-}
-
-.project-image.narrage {
-  object-fit: contain;
-
-  padding: 42px;
-
-  background: #ffffff;
-}
-
-
-/* =========================================================
-   PROXECTOS — TEXTO
-   ========================================================= */
-
-.project h3 {
-  margin:
-    0
-    0
-    7px;
-
-  font-size: 26px;
-
-  font-weight: 400;
-
-  line-height: 1.15;
-}
-
-.project-subtitle {
-  margin-bottom: 20px;
-
-  font-size: 16px;
-
-  font-style: italic;
-}
-
-.project > p:not(.project-subtitle) {
-  max-width: 570px;
-
-  margin-bottom: 0;
-
-  font-size: 16px;
-
-  line-height: 1.45;
-}
-
-
-/* =========================================================
-   ACTIVIDADES / RECURSOS / EQUIPO
-   ========================================================= */
-
-.placeholder-section {
-  min-height: 190px;
-
-  padding:
-    65px
-    max(
-      var(--side-padding),
-      calc((100vw - var(--max-width)) / 2 + var(--side-padding))
-    );
-
-  border-top:
-    1px solid
-    rgba(17, 27, 43, 0.08);
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.site-footer {
-  min-height: 210px;
-
-  padding:
-    60px
-    max(
-      var(--side-padding),
-      calc((100vw - var(--max-width)) / 2 + var(--side-padding))
-    );
-
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 40px;
-
-  background: var(--navy);
-
-  color: #ffffff;
-
-  font-size: 14px;
-
-  line-height: 1.55;
-}
-
-.site-footer > * {
-  max-width: 600px;
-}
-
-.site-footer strong {
-  font-size: 21px;
-
-  font-weight: 500;
-
-  letter-spacing: 0.12em;
-}
-
-
-/* =========================================================
-   RESPONSIVE — 1180 PX
-   ========================================================= */
-
-@media (max-width: 1180px) {
-
-  :root {
-    --side-padding: 36px;
-  }
-
-  .header-inner {
-    height: auto;
-
-    min-height: 102px;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 10px;
-
-    padding-top: 10px;
-
-    padding-bottom: 15px;
-  }
-
-  .brand-logo {
-    width: 390px;
-
-    max-width: 88vw;
-
-    max-height: 82px;
-  }
-
-  .main-nav {
-    width: 100%;
-
-    justify-content: flex-start;
-
-    flex-wrap: wrap;
-
-    row-gap: 13px;
-  }
-
-  .hero {
-    gap: 55px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — 900 PX
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  .hero {
-    min-height: auto;
-
-    grid-template-columns: 1fr;
-
-    gap: 42px;
-
-    padding-top: 58px;
-
-    padding-bottom: 68px;
-  }
-
-  .hero-text {
-    max-width: 650px;
-  }
-
-  .hero-line {
-    white-space: normal;
-  }
-
-  .hero-visual {
-    justify-content: flex-start;
-  }
-
-  .hero-image {
-    width: min(100%, 620px);
-
-    max-width: 620px;
-  }
-
-  #laboratorio {
-    grid-template-columns: 1fr;
-
-    gap: 38px;
-  }
-
-  .work-grid,
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .work-grid {
-    row-gap: 60px;
-  }
-
-  .project {
-    max-width: 720px;
-  }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — MÓBIL
-   ========================================================= */
-
-@media (max-width: 620px) {
-
-  :root {
-    --side-padding: 24px;
-  }
-
-  .header-inner {
-    min-height: 86px;
-
-    padding-top: 8px;
-
-    padding-bottom: 8px;
-  }
-
-  .brand-logo {
-    width: min(360px, 88vw);
-
-    max-width: 88vw;
-
-    max-height: 72px;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 50px;
-
-    padding-bottom: 58px;
-
-    gap: 36px;
-  }
-
-  .hero h1 {
-    font-size: clamp(34px, 9.5vw, 42px);
-  }
-
-  .hero-line {
-    white-space: normal;
-  }
-
-  .hero-text > p {
-    margin-top: 18px;
-
-    font-size: 16px;
-  }
-
-  .section {
-    padding-top: 65px;
-
-    padding-bottom: 65px;
-  }
-
-  #laboratorio {
-    padding-top: 58px;
-
-    padding-bottom: 62px;
-  }
-
-  .section h2 {
-    font-size: 34px;
-  }
-
-  .section-intro {
-    margin-bottom: 58px;
-  }
-
-  .project-image.narrage {
-    padding: 25px;
-  }
-
-  .site-footer {
-    flex-direction: column;
-
-    padding:
-      50px
-      var(--side-padding);
-  }
-
-}
+</html>
