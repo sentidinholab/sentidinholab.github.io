@@ -214,21 +214,24 @@ p {
 
 .hero {
   width: min(100%, var(--max-width));
-  min-height: 500px;
+  min-height: 470px;
 
   margin: 0 auto;
 
-  padding: 48px var(--side-padding);
+  padding:
+    24px
+    var(--side-padding)
+    46px;
 
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.12fr)
-    minmax(0, 0.88fr);
+    minmax(0, 1.14fr)
+    minmax(0, 0.86fr);
 
   align-items: center;
 
-  gap: 78px;
+  gap: 82px;
 }
 
 .hero-text {
@@ -272,7 +275,7 @@ p {
   display: block;
 
   width: 100%;
-  max-width: 520px;
+  max-width: 495px;
 
   height: auto;
 }
@@ -358,16 +361,25 @@ p {
    ========================================================= */
 
 .laboratory-section {
+  width: 100%;
+
+  padding:
+    52px
+    max(
+      var(--side-padding),
+      calc((100vw - var(--max-width)) / 2 + var(--side-padding))
+    )
+    62px;
+
   display: grid;
 
   grid-template-columns:
-    minmax(0, 0.95fr)
-    minmax(0, 1.05fr);
+    minmax(0, 1.02fr)
+    minmax(0, 0.98fr);
 
-  gap: 112px;
+  gap: 118px;
 
-  padding-top: 46px;
-  padding-bottom: 58px;
+  background: var(--cream);
 }
 
 .laboratory-section > * {
@@ -380,11 +392,11 @@ p {
 }
 
 .section-content {
-  max-width: 610px;
+  max-width: 590px;
 
-  align-self: end;
+  align-self: start;
 
-  padding-top: 6px;
+  padding-top: 8px;
 }
 
 .section-content p {
@@ -623,6 +635,8 @@ p {
 
   .hero {
     gap: 55px;
+
+    padding-top: 32px;
   }
 
   .hero h1 {
@@ -645,7 +659,7 @@ p {
 
     gap: 42px;
 
-    padding-top: 58px;
+    padding-top: 48px;
     padding-bottom: 68px;
   }
 
@@ -659,12 +673,16 @@ p {
 
   .hero-image {
     width: min(100%, 620px);
+    max-width: 620px;
   }
 
   .laboratory-section {
     grid-template-columns: 1fr;
 
     gap: 38px;
+
+    padding-top: 58px;
+    padding-bottom: 65px;
   }
 
   .work-grid,
@@ -725,7 +743,7 @@ p {
   }
 
   .hero {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 58px;
 
     gap: 36px;
