@@ -35,7 +35,6 @@ html {
 
 body {
   margin: 0;
-
   color: var(--text);
   background: #ffffff;
 
@@ -76,7 +75,7 @@ p {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 
   width: 100%;
 
@@ -84,29 +83,26 @@ p {
 
   border-bottom:
     1px solid
-    rgba(17, 27, 43, 0.045);
+    rgba(17, 27, 43, 0.06);
 
   backdrop-filter: blur(10px);
 }
 
 .header-inner {
   width: min(100%, var(--max-width));
-
-  height: 112px;
+  min-height: 112px;
 
   margin: 0 auto;
 
   padding:
-    10px
+    14px
     var(--side-padding);
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
-  gap: 26px;
+  gap: 32px;
 }
 
 
@@ -118,54 +114,36 @@ p {
   flex: 0 0 auto;
 
   display: flex;
-
   align-items: center;
 
   gap: 16px;
 }
 
 .brand-logo {
-  display: block;
-
-  width: 295px;
-
+  width: 310px;
   height: auto;
 
-  max-height: 76px;
-
-  object-fit: contain;
-
-  object-position: left center;
+  flex: 0 0 auto;
 }
 
 .brand-divider {
-  display: block;
-
   width: 1px;
-
-  height: 44px;
+  height: 46px;
 
   flex: 0 0 1px;
 
   background: var(--olive);
-
-  opacity: 0.85;
 }
 
 .brand-subtitle {
-  display: block;
-
-  min-width: 185px;
+  width: 205px;
 
   color: var(--navy);
 
-  font-size: 12.5px;
-
+  font-size: 13.5px;
   font-weight: 400;
 
   line-height: 1.28;
-
-  letter-spacing: -0.005em;
 }
 
 
@@ -177,18 +155,13 @@ p {
   flex: 1 1 auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: flex-end;
 
   gap: 18px;
 
   font-size: 10.5px;
-
   font-weight: 500;
-
-  line-height: 1;
 
   white-space: nowrap;
 }
@@ -207,17 +180,14 @@ p {
   position: absolute;
 
   left: 0;
-
   bottom: -7px;
 
   width: 100%;
-
   height: 1px;
 
   background: var(--olive);
 
   transform: scaleX(0);
-
   transform-origin: left;
 
   transition: transform 0.22s ease;
@@ -232,8 +202,6 @@ p {
 }
 
 .main-nav .language {
-  margin-left: 1px;
-
   color: var(--muted);
 }
 
@@ -244,7 +212,6 @@ p {
 
 .hero {
   width: min(100%, var(--max-width));
-
   min-height: 500px;
 
   margin: 0 auto;
@@ -264,14 +231,8 @@ p {
   gap: 78px;
 }
 
-
-/* =========================================================
-   HERO — TEXTO
-   ========================================================= */
-
 .hero-text {
   width: 100%;
-
   max-width: 640px;
 }
 
@@ -279,58 +240,39 @@ p {
   margin: 0;
 
   font-size: 43px;
-
   font-weight: 400;
 
   line-height: 1.025;
-
   letter-spacing: -0.035em;
 }
 
 .hero-line {
   display: block;
-
   white-space: nowrap;
 }
 
 .hero-text > p {
   max-width: 625px;
 
-  margin:
-    14px
-    0
-    0;
+  margin: 14px 0 0;
 
   font-size: 16px;
-
   line-height: 1.35;
 }
-
-
-/* =========================================================
-   HERO — IMAXE
-   ========================================================= */
 
 .hero-visual {
   width: 100%;
 
   display: flex;
-
   align-items: center;
-
   justify-content: flex-end;
 }
 
 .hero-image {
-  display: block;
-
   width: 100%;
-
   max-width: 520px;
 
   height: auto;
-
-  object-fit: contain;
 }
 
 
@@ -353,7 +295,6 @@ p {
   );
 
   margin-left: auto;
-
   margin-right: auto;
 }
 
@@ -363,38 +304,26 @@ p {
 
 
 /* =========================================================
-   EYEBROW
+   ETIQUETAS E TÍTULOS
    ========================================================= */
 
 .eyebrow {
-  margin:
-    0
-    0
-    11px;
+  margin: 0 0 11px;
 
   font-size: 12px;
-
   font-weight: 500;
 
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
 }
-
-
-/* =========================================================
-   TÍTULOS DE SECCIÓN
-   ========================================================= */
 
 .section h2 {
   margin: 0;
 
   font-size: 38px;
-
   font-weight: 400;
 
   line-height: 1.08;
-
   letter-spacing: -0.025em;
 }
 
@@ -407,14 +336,11 @@ p {
   display: inline-block;
 
   margin-top: 19px;
-
   padding-bottom: 2px;
 
   font-size: 14px;
 
-  border-bottom:
-    1px solid
-    currentColor;
+  border-bottom: 1px solid currentColor;
 
   transition:
     color 0.2s ease,
@@ -423,7 +349,6 @@ p {
 
 .text-link:hover {
   color: var(--olive);
-
   transform: translateX(3px);
 }
 
@@ -432,7 +357,7 @@ p {
    O LABORATORIO
    ========================================================= */
 
-#laboratorio {
+.laboratory-section {
   display: grid;
 
   grid-template-columns:
@@ -442,13 +367,11 @@ p {
   gap: 112px;
 
   padding-top: 46px;
-
   padding-bottom: 58px;
 }
 
-#laboratorio > * {
+.laboratory-section > * {
   width: auto;
-
   margin: 0;
 }
 
@@ -468,7 +391,6 @@ p {
   margin-bottom: 0;
 
   font-size: 17px;
-
   line-height: 1.42;
 }
 
@@ -479,7 +401,6 @@ p {
 
 .work-section {
   padding-top: 105px;
-
   padding-bottom: 120px;
 }
 
@@ -490,18 +411,10 @@ p {
 .section-intro > p:last-child {
   max-width: 700px;
 
-  margin:
-    14px
-    0
-    0;
+  margin: 14px 0 0;
 
   font-size: 17px;
 }
-
-
-/* =========================================================
-   LIÑAS — GRID
-   ========================================================= */
 
 .work-grid {
   display: grid;
@@ -510,7 +423,6 @@ p {
     repeat(2, minmax(0, 1fr));
 
   column-gap: 150px;
-
   row-gap: 85px;
 
   margin-bottom: 30px;
@@ -528,22 +440,15 @@ p {
   color: var(--olive);
 
   font-size: 19px;
-
-  font-weight: 400;
 }
 
 .work-item h3 {
-  margin:
-    0
-    0
-    6px;
+  margin: 0 0 6px;
 
   font-size: 29px;
-
   font-weight: 400;
 
   line-height: 1.1;
-
   letter-spacing: -0.02em;
 }
 
@@ -553,7 +458,6 @@ p {
   margin: 0;
 
   font-size: 16px;
-
   line-height: 1.45;
 }
 
@@ -564,7 +468,6 @@ p {
 
 .projects-section {
   padding-top: 90px;
-
   padding-bottom: 105px;
 }
 
@@ -585,24 +488,12 @@ p {
   min-width: 0;
 }
 
-
-/* =========================================================
-   PROXECTOS — IMAXES
-   ========================================================= */
-
 .project-image {
-  display: block;
-
   width: 100%;
-
   aspect-ratio: 16 / 10;
 
   margin-bottom: 25px;
 
-  object-fit: cover;
-}
-
-.project-image.mondo {
   object-fit: cover;
 }
 
@@ -614,19 +505,10 @@ p {
   background: #ffffff;
 }
 
-
-/* =========================================================
-   PROXECTOS — TEXTO
-   ========================================================= */
-
 .project h3 {
-  margin:
-    0
-    0
-    7px;
+  margin: 0 0 7px;
 
   font-size: 26px;
-
   font-weight: 400;
 
   line-height: 1.15;
@@ -636,7 +518,6 @@ p {
   margin-bottom: 20px;
 
   font-size: 16px;
-
   font-style: italic;
 }
 
@@ -646,13 +527,12 @@ p {
   margin-bottom: 0;
 
   font-size: 16px;
-
   line-height: 1.45;
 }
 
 
 /* =========================================================
-   ACTIVIDADES / RECURSOS / EQUIPO
+   PLACEHOLDERS
    ========================================================= */
 
 .placeholder-section {
@@ -686,7 +566,6 @@ p {
     );
 
   display: flex;
-
   justify-content: space-between;
 
   gap: 40px;
@@ -696,17 +575,11 @@ p {
   color: #ffffff;
 
   font-size: 14px;
-
   line-height: 1.55;
-}
-
-.site-footer > * {
-  max-width: 600px;
 }
 
 .site-footer strong {
   font-size: 21px;
-
   font-weight: 500;
 
   letter-spacing: 0.12em;
@@ -714,7 +587,7 @@ p {
 
 
 /* =========================================================
-   RESPONSIVE — 1180 PX
+   RESPONSIVE — TABLET
    ========================================================= */
 
 @media (max-width: 1180px) {
@@ -724,27 +597,14 @@ p {
   }
 
   .header-inner {
-    height: auto;
-
-    min-height: 108px;
-
     flex-direction: column;
 
     align-items: flex-start;
 
-    gap: 12px;
+    gap: 14px;
 
-    padding-top: 12px;
-
+    padding-top: 14px;
     padding-bottom: 16px;
-  }
-
-  .brand-logo {
-    width: 285px;
-  }
-
-  .brand-subtitle {
-    font-size: 12px;
   }
 
   .main-nav {
@@ -769,7 +629,7 @@ p {
 
 
 /* =========================================================
-   RESPONSIVE — 900 PX
+   RESPONSIVE — TABLET PEQUENA
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -782,12 +642,7 @@ p {
     gap: 42px;
 
     padding-top: 58px;
-
     padding-bottom: 68px;
-  }
-
-  .hero-text {
-    max-width: 650px;
   }
 
   .hero-line {
@@ -800,11 +655,9 @@ p {
 
   .hero-image {
     width: min(100%, 620px);
-
-    max-width: 620px;
   }
 
-  #laboratorio {
+  .laboratory-section {
     grid-template-columns: 1fr;
 
     gap: 38px;
@@ -837,15 +690,14 @@ p {
   }
 
   .header-inner {
-    min-height: 86px;
+    min-height: 88px;
 
     padding-top: 10px;
-
     padding-bottom: 10px;
   }
 
   .brand {
-    gap: 10px;
+    gap: 9px;
   }
 
   .brand-logo {
@@ -857,11 +709,9 @@ p {
   }
 
   .brand-subtitle {
-    min-width: 0;
+    width: auto;
 
-    font-size: 9px;
-
-    line-height: 1.2;
+    font-size: 9.5px;
   }
 
   .main-nav {
@@ -870,7 +720,6 @@ p {
 
   .hero {
     padding-top: 50px;
-
     padding-bottom: 58px;
 
     gap: 36px;
@@ -892,14 +741,7 @@ p {
 
   .section {
     padding-top: 65px;
-
     padding-bottom: 65px;
-  }
-
-  #laboratorio {
-    padding-top: 58px;
-
-    padding-bottom: 62px;
   }
 
   .section h2 {
