@@ -95,33 +95,13 @@ p {
 
 .brand {
   flex-shrink: 0;
+  display: block;
 }
 
-.brand-text {
-  display: flex;
-  align-items: center;
-}
-
-.brand-name {
-  color: var(--navy);
-
-  font-size: clamp(25px, 2.1vw, 38px);
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  white-space: nowrap;
-
-  padding-right: 22px;
-}
-
-.brand-subtitle {
-  color: var(--navy);
-  border-left: 1px solid var(--olive);
-
-  padding-left: 22px;
-
-  font-size: 12px;
-  line-height: 1.25;
-  white-space: nowrap;
+.brand-logo {
+  display: block;
+  width: clamp(280px, 31vw, 455px);
+  height: auto;
 }
 
 .main-nav {
@@ -139,7 +119,9 @@ p {
 
 .main-nav a {
   position: relative;
-  transition: opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .main-nav a:not(.language)::after {
@@ -156,6 +138,10 @@ p {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.22s ease;
+}
+
+.main-nav a:hover {
+  color: var(--olive);
 }
 
 .main-nav a:hover::after {
@@ -207,15 +193,23 @@ p {
   line-height: 1.45;
 }
 
-.hero-image {
+.hero-visual {
   width: 100%;
-  aspect-ratio: 1.18 / 1;
 
-  background-color: var(--cream-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.hero-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  background: transparent;
 }
 
 
@@ -389,19 +383,29 @@ p {
 }
 
 .project-image {
+  display: block;
+
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
 
   margin-bottom: 28px;
 
-  background-color: #ede8dc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
+
+  background: transparent;
+}
+
+.project-image.mondo {
+  object-fit: cover;
 }
 
 .project-image.narrage {
-  background-size: contain;
+  object-fit: contain;
+
+  padding: clamp(25px, 4vw, 55px);
+
+  background: #ffffff;
 }
 
 .project h3 {
@@ -545,18 +549,8 @@ p {
     min-height: auto;
   }
 
-  .brand-text {
-    align-items: flex-start;
-  }
-
-  .brand-name {
-    font-size: 23px;
-    padding-right: 14px;
-  }
-
-  .brand-subtitle {
-    padding-left: 14px;
-    font-size: 10px;
+  .brand-logo {
+    width: min(330px, 82vw);
   }
 
   .main-nav {
@@ -574,6 +568,10 @@ p {
     font-size: clamp(37px, 11vw, 51px);
   }
 
+  .hero-image {
+    width: 100%;
+  }
+
   .section {
     padding-top: 75px;
     padding-bottom: 75px;
@@ -581,6 +579,10 @@ p {
 
   .section-intro {
     margin-bottom: 65px;
+  }
+
+  .project-image.narrage {
+    padding: 25px;
   }
 
   .site-footer {
