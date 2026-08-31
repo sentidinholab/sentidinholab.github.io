@@ -15,8 +15,8 @@
   --ochre: #c48b1e;
   --navy: #0d2d50;
 
-  --max-width: 1280px;
-  --side-padding: 48px;
+  --max-width: 1360px;
+  --side-padding: 42px;
 }
 
 
@@ -93,12 +93,12 @@ p {
 .header-inner {
   width: min(100%, var(--max-width));
 
-  height: 108px;
+  height: 118px;
 
   margin: 0 auto;
 
   padding:
-    10px
+    8px
     var(--side-padding);
 
   display: flex;
@@ -107,7 +107,7 @@ p {
 
   justify-content: space-between;
 
-  gap: 28px;
+  gap: 20px;
 }
 
 
@@ -116,21 +116,25 @@ p {
    ========================================================= */
 
 .brand {
-  flex: 0 0 auto;
+  flex: 0 0 610px;
 
   display: flex;
 
   align-items: center;
+
+  overflow: visible;
 }
 
 .brand-logo {
   display: block;
 
-  width: 545px;
+  width: 720px;
+
+  max-width: none;
 
   height: auto;
 
-  max-height: 88px;
+  max-height: 105px;
 
   object-fit: contain;
 
@@ -151,9 +155,9 @@ p {
 
   justify-content: flex-end;
 
-  gap: 21px;
+  gap: 18px;
 
-  font-size: 11px;
+  font-size: 10.5px;
 
   font-weight: 500;
 
@@ -696,23 +700,29 @@ p {
   .header-inner {
     height: auto;
 
-    min-height: 96px;
+    min-height: 102px;
 
     flex-direction: column;
 
     align-items: flex-start;
 
-    gap: 10px;
+    gap: 8px;
 
-    padding-top: 12px;
+    padding-top: 10px;
 
-    padding-bottom: 16px;
+    padding-bottom: 15px;
+  }
+
+  .brand {
+    flex-basis: auto;
   }
 
   .brand-logo {
-    width: 500px;
+    width: 690px;
 
-    max-width: 70vw;
+    max-width: 94vw;
+
+    max-height: 100px;
   }
 
   .main-nav {
@@ -805,19 +815,19 @@ p {
   }
 
   .header-inner {
-    min-height: 78px;
+    min-height: 88px;
 
-    padding-top: 11px;
+    padding-top: 8px;
 
-    padding-bottom: 11px;
+    padding-bottom: 8px;
   }
 
   .brand-logo {
-    width: min(410px, 92vw);
+    width: 620px;
 
-    max-width: 92vw;
+    max-width: 100vw;
 
-    max-height: 68px;
+    max-height: 84px;
   }
 
   .main-nav {
