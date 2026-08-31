@@ -1,0 +1,590 @@
+/* =========================================================
+   SENTIDIÑO
+   Laboratorio de cidadanía cultural e humanidades aplicadas
+   ========================================================= */
+
+:root {
+  --ink: #111b2b;
+  --text: #171717;
+  --muted: #68706a;
+
+  --cream: #f5f1e8;
+  --cream-soft: #faf8f2;
+
+  --olive: #69744c;
+  --teal: #477b78;
+  --ochre: #c48b1e;
+  --navy: #0d2d50;
+
+  --max-width: 1440px;
+  --side-padding: clamp(28px, 5vw, 82px);
+}
+
+
+/* ---------- RESET ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+
+  font-family:
+    "Avenir Next",
+    Avenir,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(17, 27, 43, 0.06);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  width: min(100%, var(--max-width));
+  min-height: 118px;
+  margin: 0 auto;
+  padding: 20px var(--side-padding);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.brand {
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  align-items: center;
+}
+
+.brand-name {
+  color: var(--navy);
+
+  font-size: clamp(25px, 2.1vw, 38px);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+
+  padding-right: 22px;
+}
+
+.brand-subtitle {
+  color: var(--navy);
+  border-left: 1px solid var(--olive);
+
+  padding-left: 22px;
+
+  font-size: 12px;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: clamp(15px, 1.45vw, 25px);
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  white-space: nowrap;
+}
+
+.main-nav a {
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav a:not(.language)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 1px;
+
+  background: var(--olive);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.main-nav .language {
+  margin-left: 5px;
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  width: min(100%, var(--max-width));
+  min-height: 670px;
+
+  margin: 0 auto;
+  padding: clamp(70px, 8vw, 125px) var(--side-padding);
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(55px, 7vw, 115px);
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(40px, 4vw, 67px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.hero-text > p {
+  max-width: 620px;
+
+  margin: 34px 0 0;
+
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.45;
+}
+
+.hero-image {
+  width: 100%;
+  aspect-ratio: 1.18 / 1;
+
+  background-color: var(--cream-soft);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* =========================================================
+   GENERIC SECTION
+   ========================================================= */
+
+.section {
+  width: 100%;
+  padding: clamp(80px, 8vw, 130px) var(--side-padding);
+}
+
+.section > * {
+  width: min(100%, calc(var(--max-width) - (2 * var(--side-padding))));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-tinted {
+  background: var(--cream);
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section h2 {
+  margin: 0;
+
+  font-size: clamp(35px, 3.15vw, 54px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 22px;
+
+  font-size: 14px;
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 2px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--olive);
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   O LABORATORIO
+   ========================================================= */
+
+#laboratorio {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(65px, 9vw, 150px);
+}
+
+#laboratorio > * {
+  width: auto;
+  margin: 0;
+}
+
+.section-content {
+  max-width: 670px;
+  align-self: end;
+}
+
+.section-content p {
+  margin-bottom: 0;
+
+  font-size: clamp(17px, 1.45vw, 21px);
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   LIÑAS DE TRABALLO
+   ========================================================= */
+
+.work-section {
+  padding-top: clamp(90px, 9vw, 145px);
+  padding-bottom: clamp(100px, 10vw, 160px);
+}
+
+.section-intro {
+  margin-bottom: clamp(75px, 8vw, 130px);
+}
+
+.section-intro > p:last-child {
+  max-width: 700px;
+
+  margin: 18px 0 0;
+
+  font-size: clamp(16px, 1.35vw, 19px);
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: clamp(90px, 13vw, 210px);
+  row-gap: clamp(80px, 9vw, 140px);
+
+  margin-bottom: 35px;
+}
+
+.work-item {
+  max-width: 500px;
+}
+
+.number {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--olive);
+
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.work-item h3 {
+  margin: 0 0 5px;
+
+  font-size: clamp(25px, 2.1vw, 35px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.work-item p {
+  max-width: 430px;
+
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   PROXECTOS
+   ========================================================= */
+
+.projects-section .section-intro {
+  margin-bottom: clamp(55px, 6vw, 90px);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: clamp(55px, 8vw, 130px);
+}
+
+.project {
+  min-width: 0;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
+  margin-bottom: 28px;
+
+  background-color: #ede8dc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-image.narrage {
+  background-size: contain;
+}
+
+.project h3 {
+  margin: 0 0 8px;
+
+  font-size: clamp(22px, 1.85vw, 30px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.project-subtitle {
+  margin-bottom: 25px;
+
+  font-size: 16px;
+  font-style: italic;
+}
+
+.project > p:not(.project-subtitle) {
+  max-width: 600px;
+
+  margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PLACEHOLDERS
+   ========================================================= */
+
+.placeholder-section {
+  min-height: 220px;
+
+  padding: 80px var(--side-padding);
+
+  border-top: 1px solid rgba(17, 27, 43, 0.08);
+}
+
+.placeholder-section > * {
+  width: min(100%, calc(var(--max-width) - (2 * var(--side-padding))));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  background: var(--navy);
+  color: #fff;
+
+  min-height: 230px;
+
+  padding: 65px var(--side-padding);
+
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.site-footer > * {
+  max-width: 600px;
+}
+
+.site-footer strong {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1180px) {
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .main-nav {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .hero-image {
+    max-width: 720px;
+  }
+
+  #laboratorio {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .work-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-grid {
+    row-gap: 65px;
+  }
+
+  .project {
+    max-width: 760px;
+  }
+
+}
+
+
+@media (max-width: 620px) {
+
+  :root {
+    --side-padding: 24px;
+  }
+
+  .header-inner {
+    min-height: auto;
+  }
+
+  .brand-text {
+    align-items: flex-start;
+  }
+
+  .brand-name {
+    font-size: 23px;
+    padding-right: 14px;
+  }
+
+  .brand-subtitle {
+    padding-left: 14px;
+    font-size: 10px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+
+  .hero h1 {
+    font-size: clamp(37px, 11vw, 51px);
+  }
+
+  .section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .section-intro {
+    margin-bottom: 65px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+
+}
