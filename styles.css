@@ -882,3 +882,47 @@ p {
 /* =========================================================
    LECTURAS — TRABALLO LABORATORIAL
    ========================================================= */
+
+.lab-readings-intro {
+  margin-bottom: 0;
+}
+
+.lab-reading {
+  margin-top: 46px;
+}
+
+.lab-reading + .lab-reading {
+  margin-top: 52px;
+  padding-top: 42px;
+
+  border-top: 1px solid rgba(17, 27, 43, 0.14);
+}
+
+.lab-reading .lab-reading-heading {
+  margin-bottom: 24px;
+}
+
+.lab-reading .lab-reading-heading strong {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.lab-reading .text-link {
+  margin-top: 10px;
+}
+
+
+/* MÓBIL */
+
+@media (max-width: 620px) {
+
+  .lab-reading {
+    margin-top: 38px;
+  }
+
+  .lab-reading + .lab-reading {
+    margin-top: 42px;
+    padding-top: 34px;
+  }
+
+}
